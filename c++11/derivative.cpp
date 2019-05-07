@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
-#include <boost/mpl/bool.hpp>
-#include <boost/lambda/lambda.hpp>
+//#include <boost/mpl/bool.hpp>
+//#include <boost/lambda/lambda.hpp>
 
 double sc(double x) 
 {
@@ -250,12 +250,12 @@ int main()
     cout << "7th der. of psc_o at x=3 is " 
 	 << make_nth_derivative<7>(psc_o, 0.00001)(3.0) << '\n';
 
-    using boost::lambda::_1;
+    //using boost::lambda::_1;
     
-    (3.5 * _1 + 4.0) * _1 * _1;
+    //(3.5 * _1 + 4.0) * _1 * _1;
 
-    cout << "2nd der. of 3.5*x^3+4*x^2 at x=2 is "
-	      << make_nth_derivative<2>((3.5 * _1 + 4.0) * _1 * _1, 0.0001)(2) << '\n';
+    //cout << "2nd der. of 3.5*x^3+4*x^2 at x=2 is "
+	   //   << make_nth_derivative<2>((3.5 * _1 + 4.0) * _1 * _1, 0.0001)(2) << '\n';
 
     cout << "2nd der. of 3.5*x^3+4*x^2 at x=2 is "
 	 << make_nth_derivative<2>([](double x){ return (3.5 * x + 4.0) * x * x; }, 0.0001)(2) << '\n';
